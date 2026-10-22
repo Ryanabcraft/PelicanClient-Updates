@@ -37,10 +37,11 @@ Regras:
 ## Atualizar o mod
 
 1. Substitua `client/PelicanClient-1.8.9.jar` (mantenha o mesmo nome).
-2. Atualize `version/version.md` (ex.: `version-1.1`).
+2. Atualize `version/version.md` (ex.: `version-1.1`) para manter o histórico correto. O launcher
+   também compara o validador remoto do JAR, então detecta a troca do arquivo mesmo se a versão ficar igual.
 3. Commit + push em `main`.
 
-Não precisa rebuildar o launcher: ele checa a versão ao abrir e antes de cada launch.
+Não precisa rebuildar o launcher: ele checa a versão e o conteúdo remoto ao abrir e antes de cada launch.
 
 ## Atualizar o launcher
 

@@ -1,6 +1,10 @@
 [
   {
     "date": "2026-10-22T12:00:00.000Z",
+    "content": "**Pelican Client 1.0.3**\n\n- Detecta novas versões do mod mesmo quando só o arquivo .jar é substituído\n- Evita duas atualizações do mod ao mesmo tempo durante a inicialização"
+  },
+  {
+    "date": "2026-10-22T12:00:00.000Z",
     "content": "**Pelican Client 1.0.2**\n\n- Changelog agora vem do GitHub: atualiza sem reinstalar o launcher\n- Ajustes internos de atualização"
   },
   {
