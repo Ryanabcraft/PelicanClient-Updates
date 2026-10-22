@@ -1,22 +1,20 @@
 # Pelican Client — Updates
 
-Repositório **somente de distribuição** (sem código-fonte). O launcher instalado lê daqui.
+Repositório **somente de distribuição** (sem código-fonte). O launcher instalado (1.0.1+) lê daqui.
 
 ```
-client/PelicanClient-1.8.9.jar              mod (baixado para <gamePath>/mods)
+client/PelicanClient-1.8.9.jar              mod (baixado para <gamePath>/mods/PelicanClient 1.8.9.jar)
 version/version.md                          versão do mod (formato: version-1.0)
-version.md + PelicanClient 1.8.9.jar        cópias legadas (compatibilidade com launcher 1.0.0)
 launcher/latest.yml                         manifesto do auto-update do launcher
 launcher/Pelican-Client-Setup-x.y.z.exe     instalador do update
 launcher/Pelican-Client-Setup-x.y.z.exe.blockmap
 ```
 
-## Atualizar só o mod
+## Atualizar o mod
 
-1. Substitua `client/PelicanClient-1.8.9.jar`.
+1. Substitua `client/PelicanClient-1.8.9.jar` (mantenha o mesmo nome).
 2. Atualize `version/version.md` (ex.: `version-1.1`).
-3. Sincronize as cópias legadas: `version.md` e `PelicanClient 1.8.9.jar` na raiz.
-4. Commit + push em `main`.
+3. Commit + push em `main`.
 
 Não precisa rebuildar o launcher: ele checa a versão ao abrir e antes de cada launch.
 
@@ -44,6 +42,7 @@ O `sha512`/`size` do `latest.yml` têm que bater com o `.exe` publicado.
 ## Regras
 
 - **Nunca** commitar source aqui — só binário.
+- Não renomear `client/PelicanClient-1.8.9.jar` nem `version/version.md` (o launcher procura esses caminhos).
 - Não mudar `appId`, `productName` nem o padrão `artifactName` (quebra update/atalhos/userData).
 - Nunca reutilizar um número de versão já publicado (`electron-updater` não faz downgrade).
 - Instalador tem ~80 MB: GitHub avisa acima de 50 MB e bloqueia acima de 100 MB. Mantenha um só.
