@@ -5,10 +5,34 @@ Repositório **somente de distribuição** (sem código-fonte). O launcher insta
 ```
 client/PelicanClient-1.8.9.jar              mod (baixado para <gamePath>/mods/PelicanClient 1.8.9.jar)
 version/version.md                          versão do mod (formato: version-1.0)
+changelog/changelog.json                    changelog exibido no launcher (sem rebuild)
 launcher/latest.yml                         manifesto do auto-update do launcher
 launcher/Pelican-Client-Setup-x.y.z.exe     instalador do update
 launcher/Pelican-Client-Setup-x.y.z.exe.blockmap
 ```
+
+## Atualizar o changelog (sem reinstalar)
+
+Edite `changelog/changelog.json` direto no GitHub (ou localmente) e dê commit em `main`.
+Não precisa rebuildar nem reinstalar nada: o launcher baixa esse arquivo ao abrir.
+
+Formato: array de objetos, **mais novo primeiro** (o app também ordena por data):
+
+```json
+[
+  {
+    "date": "2026-10-22T00:00:00.000Z",
+    "content": "**Pelican Client 1.0.3**\n\n- Novidade 1\n- Novidade 2"
+  }
+]
+```
+
+Regras:
+- `date` em ISO 8601; `content` em Markdown (negrito, listas).
+- Mantenha o histórico (não apague as entradas antigas).
+- Se o arquivo ficar inválido ou a pessoa estiver offline, o launcher usa o último cache local e,
+  na primeira execução, o fallback que vem dentro do app.
+- O raw do GitHub tem cache de ~5 min; o launcher usa `?t=timestamp`, então normalmente pega na hora.
 
 ## Atualizar o mod
 

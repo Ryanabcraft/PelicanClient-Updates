@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-10-22T00:00:00.000Z",
+    "content": "**Pelican Client 1.0.2**\n\n- Changelog agora vem do GitHub: atualiza sem reinstalar o launcher\n- Ajustes internos de atualização"
+  },
+  {
+    "date": "2026-10-22T00:00:00.000Z",
+    "content": "**Pelican Client 1.0.1**\n\n- Atualização automática do launcher (Atualizar agora / Mais tarde)\n- Detecção dos Java instalados na máquina\n- Configurações mais limpas (sem Quick Play e sem Branch)\n- Correção dos acentos e limpeza dos arquivos antigos"
+  },
+  {
+    "date": "2026-10-21T00:00:00.000Z",
+    "content": "**Pelican Client 1.0**\n\n- Launcher próprio com tema preto e branco\n- Atualização automática do mod\n- Skin 3D e contas salvas"
+  }
+]
