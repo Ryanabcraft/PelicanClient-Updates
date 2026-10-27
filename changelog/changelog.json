@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-27T18:00:00.000Z",
+    "content": "**Pelican Client 1.0.5**\n\n- O modal de crash agora mostra a mensagem real do jogo\n- Log completo do jogo salvo em `.pelicanclient\\logs\\latest.log` (botão \"Ver crash\" abre o arquivo)"
+  },
+  {
     "date": "2026-10-27T16:00:00.000Z",
     "content": "**Pelican Client 1.0.4**\n\n- O client agora é uma **versão do jogo** (Pelican 1.8.9), instalada em `versions/` — não é mais um mod\n- OptiFine embutido na versão: não precisa mais de Forge nem de OptiFine na pasta de mods\n- Atualização automática da versão com verificação de integridade (SHA-256)"
   },

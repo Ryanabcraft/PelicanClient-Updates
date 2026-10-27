@@ -1,8 +1,8 @@
-version: 1.0.4
+version: 1.0.5
 files:
-  - url: Pelican-Client-Setup-1.0.4.exe
-    sha512: YW73kpbznm0ksy2UUyZ2AsTZzHSV0yNW6Z9UTOvEuR5d2159IPjuI7hA7vkUB1Sy/wlqZvg6hG5jLl1JqXLAVA==
-    size: 83680381
-path: Pelican-Client-Setup-1.0.4.exe
-sha512: YW73kpbznm0ksy2UUyZ2AsTZzHSV0yNW6Z9UTOvEuR5d2159IPjuI7hA7vkUB1Sy/wlqZvg6hG5jLl1JqXLAVA==
-releaseDate: '2026-10-27T16:12:35.949Z'
+  - url: Pelican-Client-Setup-1.0.5.exe
+    sha512: uJatp4Z4gxQL5YNQogVP986eLs4Vp+uqUBKfaRyZeIyaWPo1IugX3pBBReZtJ35J23OglnkV5LM2VMb4PbYi/w==
+    size: 83680732
+path: Pelican-Client-Setup-1.0.5.exe
+sha512: uJatp4Z4gxQL5YNQogVP986eLs4Vp+uqUBKfaRyZeIyaWPo1IugX3pBBReZtJ35J23OglnkV5LM2VMb4PbYi/w==
+releaseDate: '2026-10-27T16:21:24.421Z'
