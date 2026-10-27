@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-27T19:30:00.000Z",
+    "content": "**Pelican 1.8.9 - versão 13**\n\n- Corrigido o crash `NoClassDefFoundError: Setting$Type` ao abrir a config de um módulo\n- Motion Blur: o céu, a água e as partículas não ficam mais pretos\n- Motion Blur: o desfoque acompanha a velocidade real da câmera (antes ficava sempre no máximo) e ficou suave, sem serrilhado"
+  },
+  {
     "date": "2026-10-27T18:00:00.000Z",
     "content": "**Pelican Client 1.0.5**\n\n- O modal de crash agora mostra a mensagem real do jogo\n- Log completo do jogo salvo em `.pelicanclient\\logs\\latest.log` (botão \"Ver crash\" abre o arquivo)"
   },
