@@ -2,6 +2,8 @@ name: pack-client
 
 # Reempacota client/Pelican-1.8.9.zip a cada mudança no jar, json ou optionsof.
 # O site baixa esse zip por URL fixa, então subir a versão já atualiza o download.
+# Se faltar arquivo (ex.: jar apagado antes de subir o novo), o job sai limpo
+# e mantém o zip anterior — o download nunca fica quebrado.
 
 on:
   push:
@@ -20,7 +22,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Conferir arquivos
+        id: check
+        run: |
+          cd client
+          missing=""
+          for f in Pelican-1.8.9.jar Pelican-1.8.9.json optionsof.txt; do
+            [ -s "$f" ] || missing="$missing $f"
+          done
+          if [ -n "$missing" ]; then
+            echo "faltando:$missing — zip anterior mantido, nada a fazer"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
       - name: Zip do client
+        if: steps.check.outputs.ready == 'true'
         run: |
           cd client
           rm -f Pelican-1.8.9.zip
@@ -28,6 +46,7 @@ jobs:
           ls -l Pelican-1.8.9.zip
 
       - name: Commit do zip
+        if: steps.check.outputs.ready == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
