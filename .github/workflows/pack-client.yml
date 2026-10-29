@@ -1,0 +1,36 @@
+name: pack-client
+
+# Reempacota client/Pelican-1.8.9.zip a cada mudança no jar, json ou optionsof.
+# O site baixa esse zip por URL fixa, então subir a versão já atualiza o download.
+
+on:
+  push:
+    paths:
+      - 'client/Pelican-1.8.9.jar'
+      - 'client/Pelican-1.8.9.json'
+      - 'client/optionsof.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zip do client
+        run: |
+          cd client
+          rm -f Pelican-1.8.9.zip
+          zip -j -9 Pelican-1.8.9.zip Pelican-1.8.9.jar Pelican-1.8.9.json optionsof.txt
+          ls -l Pelican-1.8.9.zip
+
+      - name: Commit do zip
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/Pelican-1.8.9.zip
+          git diff --staged --quiet || git commit -m "client: zip regerado a partir do jar/json atuais"
+          git push
