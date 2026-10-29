@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-29T12:00:00.000Z",
+    "content": "**Pelican 1.8.9 - v14**\n\n- Build do client recompilado com as correções da v13 já incluídas (config de módulo e motion blur)"
+  },
+  {
     "date": "2026-10-27T19:30:00.000Z",
     "content": "**Pelican 1.8.9 - versão 13**\n\n- Corrigido o crash `NoClassDefFoundError: Setting$Type` ao abrir a config de um módulo\n- Motion Blur: o céu, a água e as partículas não ficam mais pretos\n- Motion Blur: o desfoque acompanha a velocidade real da câmera (antes ficava sempre no máximo) e ficou suave, sem serrilhado"
   },
